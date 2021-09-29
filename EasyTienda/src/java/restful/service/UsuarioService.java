@@ -101,8 +101,8 @@ public class UsuarioService {
             pstm.setString(3, usuario.getTipo_usu());
             pstm.setString(4, usuario.getUsername());
             pstm.setString(5, usuario.getPassword());
-            pstm.setString(7, usuario.getDir_usu());
-            pstm.setInt(6, usuario.getNum_id());
+            pstm.setString(6, usuario.getDir_usu());
+            pstm.setInt(7, usuario.getNum_id());
             pstm.executeUpdate();
         } catch (SQLException excepcion) {
             System.out.println("Ha ocurrido un error al eliminar  " + excepcion.getMessage());

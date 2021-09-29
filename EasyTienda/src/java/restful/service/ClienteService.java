@@ -59,7 +59,7 @@ public class ClienteService {
 
     public ClienteModel addCliente(ClienteModel cliente) {
         Conexion conex = new Conexion();
-        String Sql = "INSERT INTO cliente(id_cliente,nombre,apellidos,telefono)";
+        String Sql = "INSERT INTO clientes(id_cliente,nombre_cliente,apellidos_cliente,tel_cliente)";
         Sql = Sql + "values (?,?,?,?)";
 
         try {
@@ -79,7 +79,7 @@ public class ClienteService {
 
     public ClienteModel updateCliente(ClienteModel cliente) {
         Conexion conn = new Conexion();
-        String sql = "UPDATE cliente SET nombre_cliente=?,apellidos_cliente=?,tel_cliente=? WHERE id_cliente= ?";
+        String sql = "UPDATE clientes SET nombre_cliente=?,apellidos_cliente=?,tel_cliente=? WHERE id_cliente= ?";
         try {
             PreparedStatement pstm = conn.getCon().prepareStatement(sql);
             pstm.setString(1, cliente.getNombre_cliente());
@@ -97,7 +97,7 @@ public class ClienteService {
     public String delCliente(int id) {
         Conexion conn = new Conexion();
 
-        String sql = "DELETE FROM cliente WHERE id_cliente= ?";
+        String sql = "DELETE FROM clientes WHERE id_cliente= ?";
         try {
             PreparedStatement pstm = conn.getCon().prepareStatement(sql);
             pstm.setInt(1, id);
