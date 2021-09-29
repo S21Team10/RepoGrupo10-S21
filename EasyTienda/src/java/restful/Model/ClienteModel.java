@@ -9,19 +9,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ClienteModel {
     private int id_cliente;
-    private String nombre;
-    private String apellidos;
-    private String telefono;
-
-    public ClienteModel() {
-    }
-
-    public ClienteModel(int id_cliente, String nombre, String apellidos, String telefono) {
-        this.id_cliente = id_cliente;
-        this.nombre = nombre;
-        this.telefono = telefono;
-        
-    }
+    private String nombre_cliente;
+    private String apellidos_cliente;
+    private String tel_cliente;
 
     public int getId_cliente() {
         return id_cliente;
@@ -31,27 +21,29 @@ public class ClienteModel {
         this.id_cliente = id_cliente;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombre_cliente() {
+        return nombre_cliente;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre_cliente(String nombre_cliente) {
+        this.nombre_cliente = nombre_cliente;
     }
 
-    public String getApellidos() {
-        return apellidos;
+    public String getApellidos_cliente() {
+        return apellidos_cliente;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setApellidos_cliente(String apellidos_cliente) {
+        this.apellidos_cliente = apellidos_cliente;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getTel_cliente() {
+        return tel_cliente;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }  
+    public void setTel_cliente(String tel_cliente) {
+        this.tel_cliente = tel_cliente;
+    }
+
+    
 }
