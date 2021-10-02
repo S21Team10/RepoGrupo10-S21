@@ -66,11 +66,12 @@ public class ProductoService {
 
     public ProductoModel addProducto(ProductoModel producto) {
         Conexion conex = new Conexion();
-        String Sql = "INSERT INTO productos (nombre_prod,stock,precio_venta,nombre_prov)";
+        String Sql = "INSERT INTO productos (codigo_prod,nombre_prod,stock,precio_venta,nombre_prov)";
         Sql = Sql + "values (?,?,?,?,?)";
 
         try {
             PreparedStatement pstm = conex.getCon().prepareStatement(Sql);
+            pstm.setInt(1, producto.getCodigo_prod());
             pstm.setString(2, producto.getNombre_prod());
             pstm.setInt(3, producto.getStock());
             pstm.setFloat(4, producto.getPrecio_venta());
